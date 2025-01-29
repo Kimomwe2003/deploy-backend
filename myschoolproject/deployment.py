@@ -3,11 +3,13 @@ import dj_database_url
 from .settings import *
 from .settings import BASE_DIR
 
-# ALLOWED_HOSTS = [os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
-# CSRF_TRUSTED_ORIGINS = ['https://'+os.environ('RENDER_EXTERNAL_HOSTNAME')]
+ALLOWED_HOSTS = [os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
+CSRF_TRUSTED_ORIGINS = ['https://'+os.environ('RENDER_EXTERNAL_HOSTNAME')]
 
-ALLOWED_HOSTS = ['deploy-backend-8r15.onrender.com']
-CSRF_TRUSTED_ORIGINS = ['https://deploy-backend-8r15.onrender.com']
+# ALLOWED_HOSTS = ['deploy-backend-8r15.onrender.com']
+# CSRF_TRUSTED_ORIGINS = ['https://deploy-backend-8r15.onrender.com']
+
+
 
 DEBUG = False
 SECRET_KEY = os.environ.get('SECRET_KEY')
