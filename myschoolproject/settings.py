@@ -41,7 +41,8 @@ SECRET_KEY = '5jlwu5VmNLcIl6MmuCnIi7GCVOlE1s8A'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['deploy-backend-8r15.onrender.com', "*"]
+CSRF_TRUSTED_ORIGINS = ['https://deploy-backend-8r15.onrender.com']
 
 FRONTEND_URL = 'http://localhost:3000'
 
