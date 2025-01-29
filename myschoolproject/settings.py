@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 
 from datetime import timedelta
+# Import dj-database-url at the beginning of the file.
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,24 +24,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-from decouple import config
+# from decouple import config
 
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = '5jlwu5VmNLcIl6MmuCnIi7GCVOlE1s8A'
 
 # Security settings for production
-SECURE_HSTS_SECONDS = 31536000  # 1 year
-SECURE_HSTS_PRELOAD = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
+# SECURE_HSTS_SECONDS = 31536000  # 1 year
+# SECURE_HSTS_PRELOAD = True
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_SSL_REDIRECT = True
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 
 # SECRET_KEY = "django-insecure-k+%i1-qf7d!^_tk=d$c5qb!aau0c5w410*0lx555#_%kcapf%&"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 FRONTEND_URL = 'http://localhost:3000'
 
@@ -71,6 +73,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  
     "http://127.0.0.1:3000",
+    'https://kind-glacier-081437f03.4.azurestaticapps.net/'
 ]
 
 ROOT_URLCONF = "myschoolproject.urls"
